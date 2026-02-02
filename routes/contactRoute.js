@@ -22,6 +22,7 @@ contactRoute.post("/contact", async (req, res) => {
         res.status(201).json({ message: "Message sent & email delivered" });
 
     } catch (error) {
+        console.log(err)
         res.status(500).json({ message: "Server error" })
     }
 })
