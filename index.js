@@ -8,7 +8,11 @@ import contactRoute from "./routes/contactRoute.js";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://vijaysharma-portfolio.netlify.app",
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
